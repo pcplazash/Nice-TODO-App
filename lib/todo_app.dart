@@ -43,7 +43,7 @@ class _TodoAppState extends State<TodoApp> with WidgetsBindingObserver{
       darkTheme: AppTheme.darkTheme,
       themeMode: context.select(
               (ColorThemeCubit colorThemeCubit) => colorThemeCubit.state.themeMode),
-      home: TodosPage(),
+      home: const TodosPage(),
     );
   }
 }
