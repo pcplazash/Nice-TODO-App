@@ -11,15 +11,15 @@ class TodoItem extends StatefulWidget {
   final Todo todo;
 
   const TodoItem({
-    Key? key,
+    super.key,
     required this.todo,
-  }) : super(key: key);
+  });
 
   @override
-  _TodoItemState createState() => _TodoItemState();
+  TodoItemState createState() => TodoItemState();
 }
 
-class _TodoItemState extends State<TodoItem> {
+class TodoItemState extends State<TodoItem> {
   late final TextEditingController textController;
 
   @override

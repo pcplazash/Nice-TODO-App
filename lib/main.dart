@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 import '/blocs/blocs_barrels.dart';
 import 'core/global_blocs/cubits/color_theme_cubit/color_theme_cubit.dart';
 import 'todo_app.dart';

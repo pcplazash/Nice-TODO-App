@@ -6,7 +6,7 @@ import '/blocs/blocs_barrels.dart';
 import 'filter_button.dart';
 
 class SearchAndFilterTodo extends StatelessWidget {
-  const SearchAndFilterTodo({Key? key}) : super(key: key);
+  const SearchAndFilterTodo({super.key});
 
   @override
   Widget build(BuildContext context) {

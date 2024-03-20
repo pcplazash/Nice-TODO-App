@@ -10,7 +10,7 @@ class TodoSearchBloc extends Bloc<TodoSearchEvent, TodoSearchState> {
     on<SetSearchTermEvent>((event, emit) {
       emit(state.copyWith(searchTerm: event.newSearchTerm));
     },
-    transformer: debounce(Duration(milliseconds: 2000)));
+    transformer: debounce(const Duration(milliseconds: 2000)));
 
   }
 

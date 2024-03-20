@@ -8,7 +8,7 @@ enum Filter{
   completed,
 }
 
-Uuid uuid = Uuid();
+Uuid uuid = const Uuid();
 
 class Todo extends Equatable {
   final String id;
@@ -19,7 +19,7 @@ class Todo extends Equatable {
   String? id,
   required this.desc,
   this.completed = false,
-  }): this.id = id ?? uuid.v4();
+  }): id = id ?? uuid.v4();
 
   @override
   List<Object?> get props => [id, desc, completed];

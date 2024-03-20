@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-
 import '../../blocs/todo_filter/todo_filter_bloc.dart';
 import '../../core/models/todo_model.dart';
 import '../../core/themes/font_theme.dart';
@@ -9,7 +7,7 @@ import '../../core/themes/font_theme.dart';
 class FilterButton extends StatelessWidget {
   final Filter filter;
 
-  const FilterButton({Key? key, required this.filter}) : super(key: key);
+  const FilterButton({super.key, required this.filter});
 
   @override
   Widget build(BuildContext context) {

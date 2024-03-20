@@ -4,7 +4,7 @@ import '../../core/themes/font_theme.dart';
 import '/blocs/blocs_barrels.dart';
 
 class CreateTodo extends StatefulWidget {
-  const CreateTodo({Key? key}) : super(key: key);
+  const CreateTodo({super.key});
 
   @override
   _CreateTodoState createState() => _CreateTodoState();

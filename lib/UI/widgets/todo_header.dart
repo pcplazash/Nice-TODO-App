@@ -7,7 +7,7 @@ import '/blocs/blocs_barrels.dart';
 
 
 class TodoHeader extends StatelessWidget {
-  const TodoHeader({Key? key}) : super(key: key);
+  const TodoHeader({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,43 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-
 import '../../core/models/todo_model.dart';
 import '../../core/themes/font_theme.dart';
 import '/blocs/blocs_barrels.dart';
 import 'todo_item.dart';
 
 class ShowTodos extends StatelessWidget {
-  const ShowTodos({Key? key}) : super(key: key);
+  const ShowTodos({super.key});
 
   List<Todo> setFilteredTodos(
     Filter filter,
     List<Todo> todos,
     String searchTerm,
   ) {
-    List<Todo> _filteredTodos;
+    List<Todo> filteredTodos;
 
     switch (filter) {
       case Filter.active:
-        _filteredTodos = todos.where((Todo todo) => !todo.completed).toList();
+        filteredTodos = todos.where((Todo todo) => !todo.completed).toList();
         break;
       case Filter.completed:
-        _filteredTodos = todos.where((Todo todo) => todo.completed).toList();
+        filteredTodos = todos.where((Todo todo) => todo.completed).toList();
         break;
       case Filter.all:
       default:
-        _filteredTodos = todos;
+        filteredTodos = todos;
         break;
     }
 
     if (searchTerm.isNotEmpty) {
-      _filteredTodos = _filteredTodos
+      filteredTodos = filteredTodos
           .where((Todo todo) =>
               todo.desc.toLowerCase().contains(searchTerm.toLowerCase()))
           .toList();
     }
 
-    return _filteredTodos;
+    return filteredTodos;
   }
 
   @override
