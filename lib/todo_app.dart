@@ -37,7 +37,7 @@ class _TodoAppState extends State<TodoApp> with WidgetsBindingObserver{
   @override
   Widget build(BuildContext context) {
     return    MaterialApp(
-      title: 'TODO',
+      title: 'Daily Task Organizer',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
